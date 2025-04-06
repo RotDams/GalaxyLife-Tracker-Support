@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Our Discord Bot</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&vault=true&intent=subscription"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #f7f7f7;
+    }
+    h1 {
+      color: #333;
+    }
+    .tier {
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      width: 300px;
+      border-radius: 10px;
+    }
+    .paypal-button-container {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Support Our Discord Bot</h1>
+  <p>Select a tier below to support us monthly ❤️</p>
+
+  <!-- Subscription Tiers -->
+  <div class="tier">
+    <h2>💖 $5/month</h2>
+    <div id="paypal-button-container-5"></div>
+  </div>
+
+  <div class="tier">
+    <h2>🔥 $10/month</h2>
+    <div id="paypal-button-container-10"></div>
+  </div>
+
+  <div class="tier">
+    <h2>🚀 $20/month</h2>
+    <div id="paypal-button-container-20"></div>
+  </div>
+
+  <div class="tier">
+    <h2>🌟 $30/month</h2>
+    <div id="paypal-button-container-30"></div>
+  </div>
+
+  <div class="tier">
+    <h2>🏆 $50/month</h2>
+    <div id="paypal-button-container-50"></div>
+  </div>
+
+  <div class="tier">
+    <h2>Custom Support (One-time)</h2>
+    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_OR_ID" />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="submit" value="Donate via PayPal" />
+    </form>
+  </div>
+
+  <script>
+    const plans = {
+      "5": "PLAN_ID_FOR_5",
+      "10": "PLAN_ID_FOR_10",
+      "20": "PLAN_ID_FOR_20",
+      "30": "PLAN_ID_FOR_30",
+      "50": "PLAN_ID_FOR_50"
+    };
+
+    Object.keys(plans).forEach(amount => {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+        },
+        createSubscription: function(data, actions) {
+          return actions.subscription.create({
+            plan_id: plans[amount]
+          });
+        },
+        onApprove: function(data, actions) {
+          alert('Thank you for subscribing! Subscription ID: ' + data.subscriptionID);
+        }
+      }).render(`#paypal-button-container-${amount}`);
+    });
+  </script>
+
+</body>
+</html>
