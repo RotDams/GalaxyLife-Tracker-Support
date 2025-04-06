@@ -1,94 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support Our Discord Bot</title>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&vault=true&intent=subscription"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 text-gray-800">
-    <div class="max-w-4xl mx-auto px-4 py-10">
-      <h1 class="text-4xl font-bold text-center mb-4">Support Our Discord Bot 💖</h1>
-      <p class="text-center text-lg mb-10 text-gray-600">
-        Choose a monthly plan below or make a one-time donation. Every bit helps us improve!
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Our Discord Bot 🚀</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    .glow {
+      text-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffe5;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .btn {
+      background-color: #ffcb05;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #f5b700;
+    }
+  </style>
+</head>
+<body class="py-10 px-4">
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Tier Card -->
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">💖 $5/month</h2>
-          <p class="text-sm text-gray-500 mb-4">Small thank you for our hard work</p>
-          <div id="paypal-button-container-5" class="paypal-button-container"></div>
-        </div>
+  <h1 class="text-4xl glow text-center mb-4">💫 Support Our Discord Bot</h1>
+  <p class="text-center text-lg mb-10 text-gray-300">
+    Help us keep the galaxy running! Choose a plan or donate once ❤️
+  </p>
 
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">🔥 $10/month</h2>
-          <p class="text-sm text-gray-500 mb-4">Show us some fire support!</p>
-          <div id="paypal-button-container-10" class="paypal-button-container"></div>
-        </div>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">🚀 $20/month</h2>
-          <p class="text-sm text-gray-500 mb-4">Fuel the future of the bot</p>
-          <div id="paypal-button-container-20" class="paypal-button-container"></div>
-        </div>
-
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">🌟 $30/month</h2>
-          <p class="text-sm text-gray-500 mb-4">You're a superstar supporter!</p>
-          <div id="paypal-button-container-30" class="paypal-button-container"></div>
-        </div>
-
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">🏆 $50/month</h2>
-          <p class="text-sm text-gray-500 mb-4">Ultimate supporter status 💎</p>
-          <div id="paypal-button-container-50" class="paypal-button-container"></div>
-        </div>
-
-        <div class="bg-white shadow-md rounded-2xl p-6 text-center">
-          <h2 class="text-2xl font-semibold mb-2">Custom Donation</h2>
-          <p class="text-sm text-gray-500 mb-4">One-time support, any amount 💰</p>
-          <form action="https://www.paypal.com/donate" method="post" target="_blank" class="space-y-4">
-            <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_OR_ID" />
-            <input type="hidden" name="currency_code" value="USD" />
-            <input type="submit" value="Donate with PayPal" class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-2 rounded-full cursor-pointer shadow-md" />
-          </form>
-        </div>
-      </div>
-
-      <p class="mt-12 text-center text-gray-500 text-sm">
-        Thank you for helping us grow and maintain the project! 💙
-      </p>
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">💖 €5 / month</h2>
+      <p class="text-sm text-gray-400">Just a little cosmic hug</p>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=YOUR_PLAN_ID_5" class="btn inline-block mt-4">Subscribe</a>
     </div>
 
-    <script>
-      const plans = {
-        "5": "PLAN_ID_FOR_5",
-        "10": "PLAN_ID_FOR_10",
-        "20": "PLAN_ID_FOR_20",
-        "30": "PLAN_ID_FOR_30",
-        "50": "PLAN_ID_FOR_50"
-      };
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">🔥 €10 / month</h2>
+      <p class="text-sm text-gray-400">Boost our space engines!</p>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2U071059AR320834DM7ZFSHI" class="btn inline-block mt-4">Subscribe</a>
+    </div>
 
-      Object.keys(plans).forEach(amount => {
-        paypal.Buttons({
-          style: {
-            shape: 'pill',
-            color: 'gold',
-            layout: 'vertical',
-            label: 'subscribe'
-          },
-          createSubscription: function (data, actions) {
-            return actions.subscription.create({
-              plan_id: plans[amount]
-            });
-          },
-          onApprove: function (data, actions) {
-            alert(`Thank you for subscribing! Your subscription ID is: ${data.subscriptionID}`);
-          }
-        }).render(`#paypal-button-container-${amount}`);
-      });
-    </script>
-  </body>
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">🚀 €20 / month</h2>
+      <p class="text-sm text-gray-400">Full warp support</p>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=YOUR_PLAN_ID_20" class="btn inline-block mt-4">Subscribe</a>
+    </div>
+
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">💖 €30 / month</h2>
+      <p class="text-sm text-gray-400">You're a star commander</p>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=YOUR_PLAN_ID_30" class="btn inline-block mt-4">Subscribe</a>
+    </div>
+
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">🌌 €50 / month</h2>
+      <p class="text-sm text-gray-400">Legendary galactic sponsor</p>
+      <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=YOUR_PLAN_ID_50" class="btn inline-block mt-4">Subscribe</a>
+    </div>
+
+    <div class="card rounded-xl p-6 text-center">
+      <h2 class="text-2xl mb-2">💸 One-Time Donation</h2>
+      <p class="text-sm text-gray-400">Not ready for monthly? That’s okay!</p>
+      <a href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL_OR_ID&currency_code=EUR" class="btn inline-block mt-4">Donate</a>
+    </div>
+  </div>
+
+  <p class="mt-12 text-center text-gray-500 text-sm">
+    Thank you for helping us keep the stars shining! ✨
+  </p>
+
+</body>
 </html>
